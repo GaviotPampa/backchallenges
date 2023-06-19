@@ -2,15 +2,15 @@ const fs = require(`fs`);
 
 class ProductsManager {
   constructor(path) {
-    this.products = [];
     this.path = path;
   }
+
 
   async getProducts() {
     try {
       if (fs.existsSync(this.path)) {
-        const products = await fs.promises.readFile(this.path, "utf-8");
-        const productsjs = JSON.parse(products);
+        const product = await fs.promises.readFile(this.path, "utf-8");
+        const productsjs = JSON.parse(product);
         return productsjs;
       } else {
         return [];
@@ -21,35 +21,70 @@ class ProductsManager {
   }
 
   async addProduct(product) {
+   
     try {
       const productsFile = await this.getProducts();
       productsFile.push(product);
       await fs.promises.writeFile(this.path, JSON.stringify(productsFile));
-      return product;
+      return (product);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  #getMaxId() {
+    let maxId = 0;
+    this.product.map((product) => {
+      if (product.id > maxId) maxId = product.id;
+    });
+    return maxId;
+  }
+
+  async getProductById(id) {
+    try {
+      const productsFile = await this.getProducts ();
+      const product = productsFile.find((product) => product.id === id);
+      if (!product) {
+        console.log("El id seleccionado no existe");
+             return  
+      } else 
+          return product;
     } catch (error) {
       console.log(error);
     }
   }
 
-  
- /*  async getProductById(products) {
+  async uppdateProduct(product, id) {
     try {
-        if (!id) {
-           return "El id seleccionado no existe";
-          } else 
-            return  
-             products.filter((products) => products.id === id);
-            
-          
-        
+      const productsFile = await this.getProducts();
+      const index = productsFile.findIndex((product) => product.id === id);
+      if (index === -1) {
+        throw new Error("Id not found");
+      } else {
+        productsFile[index] = { ...product};
+      }
+      await fs.promises.writeFile(this.path, JSON.stringify(productsFile));
     } catch (error) {
-        console.log(error);
+      console.log(error);
+    }
+  }
 
-    }*/
-  } 
+  async deleteProduct(id) {
+    try {
+      const productsFile = await this.getProducts();
+      if(productsFile.length > 0){
+          const newArray = productsFile.filter(product => product.id !== id);
+          await fs.promises.writeFile(this.path, JSON.stringify(newArray));
+        } else {
+          throw new Error('Product not found');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
 
 /* instancia, se pasa la ruta que espera el constructor*/
-const manager = new ProductsManager("./´products.json");
+const manager = new ProductsManager("./products.json");
 
 const product1 = {
   title: "Bota 1",
@@ -58,6 +93,8 @@ const product1 = {
   thumbnail: "thumbnail",
   code: "abc123",
   stock: 10,
+  
+
 };
 
 const product2 = {
@@ -94,6 +131,22 @@ const test = async () => {
   await manager.addProduct(product3);
   const getProducts4 = await manager.getProducts();
   console.log("Consulta 4: ", getProducts4);
+  //quinta consulta
+/*   await manager.uppdateProduct(
+    "Bota tres",
+    "description Bota 3",
+    65000,
+    "thumbnail",
+    "abc125",
+    20,
+    5
+  );
+  const getProducts5 = await manager.getProducts();
+  console.log("Consulta 4: ", getProducts5); */
+
+  await manager.getProductById(1);
+  const getProducts6 = await manager.getProducts();
+  console.log("Consulta ID: ", getProducts6);
 };
 
 test(); //ejecutar

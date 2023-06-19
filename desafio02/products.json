@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Bota 1",
+    "description": "description Bota 1",
+    "price": 25000,
+    "thumbnail": "thumbnail",
+    "code": "abc123",
+    "stock": 10
+  },
+  {
+    "title": "Bota Dos",
+    "description": "description Bota 2",
+    "price": 45000,
+    "thumbnail": "thumbnail",
+    "code": "abc124",
+    "stock": 15
+  },
+  {
+    "title": "Bota tres",
+    "description": "description Bota 3",
+    "price": 65000,
+    "thumbnail": "thumbnail",
+    "code": "abc125",
+    "stock": 20
+  }
+]
