@@ -5,7 +5,8 @@
     "price": 25000,
     "thumbnail": "thumbnail",
     "code": "abc123",
-    "stock": 10
+    "stock": 10,
+    "id": 1
   },
   {
     "title": "Bota Dos",
@@ -13,7 +14,8 @@
     "price": 45000,
     "thumbnail": "thumbnail",
     "code": "abc124",
-    "stock": 15
+    "stock": 15,
+    "id": 2
   },
   {
     "title": "Bota tres",
@@ -21,6 +23,7 @@
     "price": 65000,
     "thumbnail": "thumbnail",
     "code": "abc125",
-    "stock": 20
+    "stock": 20,
+    "id": 3
   }
 ]

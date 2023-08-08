@@ -1,8 +1,20 @@
-<h2>Desafio Websockets</h2>
-
 <div>
-   <p>Trabajando con Websockets</p> 
+  <p>Trabajando con Websockets</p>
 </div>
 
+<form id="form">
+  <label>Product</label>
+  <input type="text" id="title" placeholder="title" />
+  <br />
+  <label>Price</label>
+  <input type="text" id="price" placeholder="Price" />
+  <input type="submit" id="enviar"  value="Enviar" />
+  <br />
+  <input type="reset" id="reset" value="Eliminar" />
+
+</form>
+
+<p id="products"></p>
+
 <script src="/socket.io/socket.io.js"></script>
-<script src="index.js"></script>
+<script src="/index.js"></script>

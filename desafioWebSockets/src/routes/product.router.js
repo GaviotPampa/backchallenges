@@ -32,8 +32,8 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:pid", async (req, res, next) => {
   try {
-    const { id } = req.params;
-    const product = await getProductById(Number(id));
+    const { pid } = req.params;
+    const product = await getProductById(Number(pid));
     const productId = product.find(
       (product) => product.id === Number(productId)
     );
