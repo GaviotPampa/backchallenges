@@ -12,7 +12,7 @@
     "parser": "^0.1.4"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node .",
     "dev": "nodemon ."
   },
   "name": "desafio05-loginporformulario",
