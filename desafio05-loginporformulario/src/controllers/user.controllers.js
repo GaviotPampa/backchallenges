@@ -18,8 +18,10 @@ export const loginUser = async (req, res) => {
     if (user) {
       req.session.email = email;
       req.session.password = password;
-      res.redirect("/session/products");
-    } else res.redirect("/session/errorLogin");
+      res.redirect("/products");
+    } else 
+  /*   res.json ({msg: 'Invalid'}) */
+    res.redirect("/session/errorLogin");
   } catch (error) {
     console.log(error);
   }

@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #c1bdba;
+}
+
+.form {
+  background: #13232f;
+  padding: 20px;
+  max-width: 600px;
+  margin: 10px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px #13232f;
+}
+
+p {
+  color: brown;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  margin: 0 0 5px;
+  font-size: 15px;
+}
+
+h2 {
+  color: #1ab188;
+  font-size: 10px;
+  text-align: center;
+}
+
+label {
+  position: relative;
+  color: #fff;
+  font-size: 10px;
+}
+
+input {
+  width: 100%;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 2px;
+  padding: 8px 10;
+  font-size: 0.5rem;
+  background: #1ab188;
+  color: #fff;
+}
+
+.login .button {
+  text-align: center;
+  width: 100%;
+}
+
+.register {
+  text-align: end;
+}
+
+.btn-secundary {
+  background: #a0b3b0;
+  transition: 0.5s ease;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.btn-secundary:hover {
+  background-color: #1ab188;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.contenedor-input {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.new-user {
+  margin-top: -20px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.contenedor-formularios {
+  background: #13232f;
+  padding: 40px;
+  max-width: 200px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px #13232f;
+}
+
+.contenedor-products {
+  max-width: 200px;
+  margin: 40px auto;
+}
+
+.contenedor-products h2 {
+  font-size: 20px;
+  text-align: left;
+}
+
+.contenedor-products p {
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.contenedor-products .btn-secundary {
+  margin: 30px;
+}
+
+.items {
+  color: #000;
+}
+.register-form {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}

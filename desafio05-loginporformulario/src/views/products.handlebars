@@ -1,4 +1,25 @@
-<h2>Bienvenido</h2>
-<p>{{{user.first_name}}} </p>
+<div class="contenedor-products">
+  <h2 class="bienvenido">Bienvenido,
+    {{user.first_name}}
+     ¡Que gusto verte!
+  </h2>
+  {{#if products.length}}
+    {{#each products}}
+      <div class="items">
+        <p>{{title}}</p>
+        <p>{{price}} </p>
+      </div>
+    {{/each}}
+  {{else}}
+    <p> No se encontraron productos🙄</p>
+  {{/if}}
+  <div class="new-user">
+    <button
+      class="button btn-secundary"
+      onclick="location.href='/session/login'"
+    >Cerrar Sesión</button>
+  </div>
 
-<button onclick="location.href='/session/login'">Cerrar Sesión</button>
+</div>
+
+<script src="js/index.js" charset="utf-8"></script>

@@ -1,11 +1,29 @@
-<h2>LOGIN</h2>
-<form action="/users/login" method="post">
-  Email:
+<div class="contenedor-formularios">
+ <h1>LOGIN</h1>
+<form class="form" action="/session/login" method="post">
+<div>
+  <div class="contenedor-input">
+  <label> Email:</label>
   <input type="email" name="email" id="email" />
-  Password:
+  </div>
+<div class="contenedor-input">
+ <label>Password:</label> 
   <input type="password" name="password" id="password" />
-  <input type="submit" value="LOGIN" />
+</div>
+ <div class="login">
+ <input 
+  class="button"
+  type="submit" value="LOGIN" />
+ </div>
+ 
 </form>
+</div>
+<h2 class="new-user">¿Usuario nuevo?</h2>
+<div class="register
+" >
+<button 
+class="button btn-secundary
+"   onclick="location.href='/session/register'">Registrate</button> 
+</div>
 
-<h3>¿USUARIO NUEVO?</h3>
-<button onclick="location.href='/api/session/github'">Ingresar con Github</button>
+</div>

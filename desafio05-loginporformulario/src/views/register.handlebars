@@ -1,15 +1,35 @@
+<div class="contenedor-formularios register-form">
 <h1>REGISTRO</h1>
 
-<form action="/users/register" method="post">
-  FirstName:
+<form class="form" action="/users/register" method="post">
+<div class="contenedor-input">
+  <label for=""> FirstName:</label>
   <input type="text" name="first_name" id="first_name" />
-  LastName:
-  <input type="text" name="last_name" id="last_name" />
-  Email:
+</div>
+
+ 
+<div class="contenedor-input">
+  <label for=""> LastName:</label>
+ <input type="text" name="last_name" id="last_name" />
+</div>
+ 
+ 
+  <div class="contenedor-input">
+  <label for="">Email:</label> 
   <input type="email" name="email" id="email" />
-  Age:
+  </div>
+  <div class="contenedor-input">
+  <label for="">Age:</label> 
   <input type="number" name="age" id="age" />
-  Password:
+  </div>
+  <div class="contenedor-input">
+  <label for="">Password:</label> 
   <input type="password" name="password" id="password" />
-  <input type="submit" value="REGISTER" />
+  </div>
+  <div>
+ <input class="button" type="submit" value="REGISTER" />
+  </div>
+ 
 </form>
+</div>
+</div>

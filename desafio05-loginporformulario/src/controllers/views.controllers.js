@@ -17,5 +17,5 @@ export const profile = (req, res) => {
 };
 
 export const products = (req, res) => {
-  res.render("products");
+  res.render("products"/* , {users} */);
 };

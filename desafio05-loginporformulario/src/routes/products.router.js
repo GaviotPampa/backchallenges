@@ -1,15 +1,15 @@
-/* import { Router } from "express";
+import { Router } from "express";
 const router = Router ();
 
 import {login} from "../controllers/views.controllers.js"
 
-router.get('/logout', login){
+router.post('/logout', login, (req, res) => {
    req.session.destroy(err => {
    if (err) {
      return res.json({ status: 'Logout ERROR', body: err })
    }
-   res.send('Logout ok!')
+   else  res.send('Logout ok!')
  })
-}
-export default router;
- */
+ console.log(err);
+});
+export default router; 
